@@ -1,0 +1,76 @@
+/*                                                                                                            
+88                        88                                                                               
+88                        88                                                 ,d     88                        
+88                        88                                                 88                                   
+88           8b,     ,d8  88,dPPYba,    ,adPPYba,  8b,dPPYba,  ,adPPYYba,  MM88MMM  88   ,adPPYba,   8b,dPPYba,   
+88            `Y8, ,8P'   88P'    "8a  a8P_____88  88P'   "Y8  ""     `Y8    88     88  a8"     "8a  88P'   `"8a  
+88              )888(     88       d8  8PP"""""""  88          ,adPPPPP88    88     88  8b       d8  88       88  
+88            ,d8" "8b,   88b,   ,a8"  "8b,   ,aa  88          88,    ,88    88,    88  "8a,   ,a8"  88       88  
+88888888888  8P'     `Y8  8Y"Ybbd8"'    `"Ybbd8"'  88          `"8bbdP"Y8    "Y888  88   `"YbbdP"'   88       88  
+================================================================================================================
+// Programmer: Daniel Rae Tiangco
+// Project: Linear Search
+// Date: 11/28/2023
+// Description: Linear search, also known as sequential search, is a simple algorithm for finding a target element 
+within a list or array. The linear search algorithm sequentially checks each element of the list or array until a 
+match is found or the end of the list is reached.
+================================================================================================================
+*/
+
+using System;
+
+public class LinearSearch
+
+{
+
+    public static void Main(string[] args)
+
+    {
+
+        // Variables
+        int[] array = { 4, 2, 7, 1, 9, 5, 3 };
+        int target = 7;
+
+        int result = LinSearch(array, target);
+
+        if (result != -1) 
+        
+        {
+
+            Console.WriteLine("The element " + target + " is found at index " + result);
+
+        }
+
+        else
+
+        {
+
+            Console.WriteLine("The element " + target + " is not found in the array");
+
+        }
+
+    }
+
+    public static int LinSearch(int[] arr, int val)
+
+    {
+
+        for (int i = 0; i < arr.Length; i++)
+
+        {
+
+            if (arr[i] == val)
+
+            {
+
+                return i;
+
+            }
+
+        }
+
+        return -1;
+
+    }
+
+}
